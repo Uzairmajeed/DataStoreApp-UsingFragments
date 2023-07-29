@@ -1,0 +1,99 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/backgroud_middle"
+    android:scrollbars="horizontal|vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbarview1"
+            layout="@layout/toolbar_view" />
+
+        <Spinner
+            android:id="@+id/spinnerLayoutStyle"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbarview1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#22321F"
+            android:background="@drawable/backgroud_spinner"
+            android:entries="@array/layout_style_options" />
+
+        <TextView
+            android:id="@+id/textViewMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroud_views"
+            android:layout_below="@id/spinnerLayoutStyle"
+            android:padding="10dp"
+            android:text="Male:"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewMen"
+            android:scrollbars="horizontal"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+        <TextView
+            android:id="@+id/textViewWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerViewMen"
+            android:padding="10dp"
+            android:text="Female:"
+            android:background="@drawable/backgroud_views"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewWomen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewWomen"
+            android:scrollbars="horizontal"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+        <TextView
+            android:id="@+id/textViewOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerViewWomen"
+            android:padding="10dp"
+            android:text="Others:"
+            android:background="@drawable/backgroud_views"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold|italic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewOthers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewOthers"
+            android:scrollbars="horizontal"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+    </RelativeLayout>
+
+</ScrollView>

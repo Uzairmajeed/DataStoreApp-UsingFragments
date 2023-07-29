@@ -1,0 +1,30 @@
+<!-- fragment_exit_confirmation.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- Add any other views or messages you want to show in the bottom sheet -->
+
+    <Button
+        android:id="@+id/buttonYes"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+        app:cornerRadius="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary_color"/>
+
+    <Button
+        android:id="@+id/buttonNo"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="No"
+        app:cornerRadius="12dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/primary_color"/>
+
+</LinearLayout>

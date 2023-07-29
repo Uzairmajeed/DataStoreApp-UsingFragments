@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/backgroud_middle"
+    tools:context=".save_activity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include
+                android:id="@+id/toolbarview1"
+                layout="@layout/toolbar_save" />
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="383dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:hint="Name"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/toolbarview1"
+                app:layout_constraintBottom_toTopOf="@+id/editTextAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="56dp" />
+
+            <EditText
+                android:id="@+id/editTextBio"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:hint="Bio"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+                app:layout_constraintBottom_toTopOf="@+id/editTextEmail"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scrollbars="vertical|horizontal"
+                tools:layout_editor_absoluteX="13dp"
+                tools:layout_editor_absoluteY="217dp" />
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextBio"
+                app:layout_constraintBottom_toTopOf="@+id/spinnerGender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteY="271dp" />
+
+
+            <Spinner
+                android:id="@+id/spinnerGender"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Select_Gender"
+                android:backgroundTint="#22321F"
+                android:background="@drawable/backgroud_spinner"
+                app:layout_constraintBottom_toTopOf="@+id/imageView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
+
+            <EditText
+                android:id="@+id/editTextPhone"
+                android:layout_width="385dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:hint="Phone Number"
+                android:padding="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAddress"
+                app:layout_constraintBottom_toTopOf="@+id/editTextBio"
+                tools:layout_editor_absoluteX="13dp"
+                tools:layout_editor_absoluteY="163dp" />
+
+            <!-- ImageView -->
+
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="387dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/teal_700"
+                android:hint="Address"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/editTextName"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPhone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="12dp"
+                tools:layout_editor_absoluteY="110dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                tools:layout_editor_absoluteX="165dp"
+                tools:layout_editor_absoluteY="361dp"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGender"
+                app:layout_constraintBottom_toTopOf="@+id/buttonUploadImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <Button
+                android:id="@+id/buttonSaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#20655E"
+                android:text="Save"
+                android:textColor="@color/white"
+                app:cornerRadius="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonUploadImage"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="489dp" />
+
+            <Button
+                android:id="@+id/buttonUploadImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#20655E"
+                android:text="Upload Image"
+                app:cornerRadius="12dp"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                app:layout_constraintBottom_toTopOf="@+id/buttonSaves"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:layout_editor_absoluteX="132dp"
+                tools:layout_editor_absoluteY="441dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</ScrollView>
+
